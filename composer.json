@@ -1,6 +1,5 @@
 {
     "name": "volkmann-design-code/kirby-utils",
-    "version": "0.1.0",
     "description": "Utility functions for Kirby Projects",
     "type": "library",
     "scripts": {
