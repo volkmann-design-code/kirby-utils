@@ -1,0 +1,29 @@
+{
+    "name": "volkmann-design-code/kirby-utils",
+    "version": "0.1.0",
+    "description": "Utility functions for Kirby Projects",
+    "type": "library",
+    "require": {
+        "php": "~8.3"
+    },
+    "require-dev": {
+        "getkirby/cms": "~4.1.2"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "VolkmannDesignCode\\KirbyUtils\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Enzo Volkmann",
+            "email": "enzo@volkmann.dev"
+        }
+    ],
+    "config": {
+        "allow-plugins": {
+            "getkirby/composer-installer": true
+        }
+    }
+}
