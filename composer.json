@@ -3,11 +3,15 @@
     "version": "0.1.0",
     "description": "Utility functions for Kirby Projects",
     "type": "library",
+    "scripts": {
+        "test": "phpunit tests"
+    },
     "require": {
         "php": "~8.3"
     },
     "require-dev": {
-        "getkirby/cms": "~4.1.2"
+        "getkirby/cms": "~4.1.2",
+        "phpunit/phpunit": "^11"
     },
     "license": "MIT",
     "autoload": {
