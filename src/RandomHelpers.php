@@ -8,7 +8,7 @@ class RandomHelpers {
         return rand($min * 10, $max * 10) / 10;
     }
 
-    static function getRandomFloatsInRange(float $min, float $max, int $count, float $minDiff): array
+    static function getRandomFloatsInRange(float $min, float $max, int $count, float $minDiff = 0): array
     {
         $range = $max - $min;
         if (($range - $minDiff) < $minDiff) {
