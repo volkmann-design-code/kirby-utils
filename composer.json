@@ -10,7 +10,7 @@
     },
     "require-dev": {
         "getkirby/cms": "~4.1.2",
-        "phpunit/phpunit": "^11"
+        "phpunit/phpunit": "^10"
     },
     "license": "MIT",
     "autoload": {
