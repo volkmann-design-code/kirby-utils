@@ -6,7 +6,7 @@ class UrlHelpers {
 
     static function telLink(string $phoneNumber): string
     {
-        return 'tel:' . str_replace(' ', '', $phoneNumber);
+        return 'tel:' . preg_replace('/[^\d+]/', '', $phoneNumber);
     }
 
     static function mailtoLink(string $email): string
