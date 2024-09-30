@@ -25,7 +25,9 @@ final class LayoutHelpersTest extends TestCase
             ]
         ]);
 
+        $this->assertTrue(LayoutHelpers::hasBlockType($layout, 'heading'));
         $this->assertTrue(LayoutHelpers::hasBlockType($layout, ['heading']));
+        $this->assertFalse(LayoutHelpers::hasBlockType($layout, 'image'));
         $this->assertFalse(LayoutHelpers::hasBlockType($layout, ['image']));
     }
 
