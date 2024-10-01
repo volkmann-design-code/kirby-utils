@@ -1,11 +1,12 @@
 {
     "name": "volkmann-design-code/kirby-utils",
     "description": "Utility functions for Kirby Projects",
-    "type": "library",
+    "type": "kirby-plugin",
     "scripts": {
         "test": "phpunit tests"
     },
     "require": {
+        "getkirby/composer-installer": "^1.2",
         "php": "~8.1.0 || ~8.2.0 || ~8.3.0"
     },
     "require-dev": {
