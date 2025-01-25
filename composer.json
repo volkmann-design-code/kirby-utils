@@ -2,7 +2,7 @@
     "name": "volkmann-design-code/kirby-utils",
     "description": "Utility functions for Kirby Projects",
     "homepage": "https://github.com/volkmann-design-code/kirby-utils",
-    "version": "0.6.0",
+    "version": "0.7.0",
     "type": "kirby-plugin",
     "scripts": {
         "test": "phpunit tests"
