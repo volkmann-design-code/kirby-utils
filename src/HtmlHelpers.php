@@ -11,8 +11,14 @@ class HtmlHelpers {
 
     static function svgWithClass(string|File $file, string|array $classes): string|null {
         $classNames = is_string($classes) ? [$classes] : $classes;
-        $class = Html::attr('class', A::join($classNames, ' '));
-        return Str::replace(svg($file), '<svg', '<svg ' . $class);
+
+        return self::svg($file, [
+            'class' => A::join($classNames, ' ')
+        ]);
+    }
+
+    static function svg(string|File $file, array $attributes): string|null {
+        return Str::replace(svg($file), '<svg', '<svg ' . Html::attr($attributes));
     }
 
 }
