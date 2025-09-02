@@ -2,7 +2,7 @@
     "name": "volkmann-design-code/kirby-utils",
     "description": "Utility functions for Kirby Projects",
     "homepage": "https://github.com/volkmann-design-code/kirby-utils",
-    "version": "0.7.1",
+    "version": "0.8.1",
     "type": "kirby-plugin",
     "scripts": {
         "test": "phpunit tests"
@@ -12,7 +12,7 @@
         "php": "~8.1.0 || ~8.2.0 || ~8.3.0 || ~8.4.0"
     },
     "require-dev": {
-        "getkirby/cms": "~4.1.2 || ~4.6.0",
+        "getkirby/cms": "~4.1.2 || ~4.6.0 || ~5.0.0",
         "phpunit/phpunit": "^10"
     },
     "license": "MIT",
