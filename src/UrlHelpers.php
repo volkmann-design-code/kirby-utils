@@ -17,9 +17,9 @@ class UrlHelpers {
         return 'mailto:' . $email;
     }
 
-    static function linkTarget(Field $linkField): string
+    static function linkTarget(Field $linkField, string $selfTarget = ''): string
     {
-        return self::isExternalLink($linkField) ? '_blank' : '_self';
+        return self::isExternalLink($linkField) ? '_blank' : $selfTarget;
     }
 
     static function linkRel(Field $linkField, string $externalRel = 'nofollow noopener noreferrer'): string
