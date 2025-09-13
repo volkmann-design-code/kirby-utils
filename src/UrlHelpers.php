@@ -29,9 +29,9 @@ class UrlHelpers {
 
     static function isExternalLink(Field $linkField): bool
     {
-        $langCode = $kirby->language()?->code() ?? '';
-        $siteRoot = $site->url()->beforeEnd("/$langCode");
-        return Str::startsWith($linkField, 'http://') && !Str::startsWith($linkField, $siteRoot);
+        $langCode = kirby()->language()?->code() ?? '';
+        $siteRoot = Str::beforeEnd(site()->url(), "/$langCode");
+        return Str::match($linkField, '/^https?:\/\//') && !Str::startsWith($linkField, $siteRoot);
     }
 
 }
