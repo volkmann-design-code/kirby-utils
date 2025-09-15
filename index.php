@@ -4,9 +4,16 @@ require_once __DIR__ . '/src/FieldMethods/HeadingIds.php';
 
 use Kirby\Content\Field;
 use function VolkmannDesignCode\KirbyUtils\FieldMethods\headingIds;
+use function VolkmannDesignCode\KirbyUtils\FieldMethods\wrapInLineClamp;
 
 Kirby::plugin('volkmann-design-code/kirby-utils', [
     'fieldMethods' => [
+        /**
+         * Wrap a field in a line-clamped span
+         */
+        'wrapInLineClamp' => function (Field $field): Field {
+            return wrapInLineClamp($field);
+        },
         /**
          * Add IDs to headings in a field
          */
