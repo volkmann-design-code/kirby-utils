@@ -36,4 +36,14 @@ class HtmlHelpers {
           ]);
     }
 
+    /**
+     * Takes any field or string and generates a html-free slug from it.
+     *
+     * @param mixed $content a field or string
+     * @return string
+     */
+    static function slug(mixed $content): string {
+        return Str::slug(Str::unhtml(Str::replace($content, '<br>', ' ')));
+    }
+
 }

@@ -4,7 +4,7 @@ namespace VolkmannDesignCode\KirbyUtils\FieldMethods;
 
 use Kirby\Content\Field;
 use Kirby\Toolkit\Dom;
-use Kirby\Toolkit\Str;
+use VolkmannDesignCode\KirbyUtils\HtmlHelpers;
 
 function headingIds(Field $field): Field {
     if ($field->isNotEmpty() === true) {
@@ -21,7 +21,7 @@ function headingIds(Field $field): Field {
         $elements   = $dom->query($query);
 
         foreach ($elements as $element) {
-            $element->setAttribute('id', Str::slug($element->nodeValue));
+            $element->setAttribute('id', HtmlHelpers::slug($element->nodeValue));
         }
 
         $field->value = $dom->toString();
