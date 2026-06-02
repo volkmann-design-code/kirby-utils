@@ -14,11 +14,12 @@ class HtmlHelpers {
     private const SYMBOL_TAG_OPEN = '<symbol';
     private const SYMBOL_TAG_CLOSE = '</symbol>';
 
-    static function svgWithClass(string|File $file, string|array $classes): string|null {
+    static function svgWithClass(string|File $file, string|array $classes, array $attributes = []): string|null {
         $classNames = is_string($classes) ? [$classes] : $classes;
 
         return self::svg($file, [
-            'class' => A::join($classNames, ' ')
+            'class' => A::join($classNames, ' '),
+            ...$attributes,
         ]);
     }
 
