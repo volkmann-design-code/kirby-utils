@@ -17,6 +17,15 @@ final class HtmlHelpersTest extends TestCase
 
         $withMultipleClasses = HtmlHelpers::svgWithClass($svgPath, ['kirby', 'icon']);
         $this->assertStringStartsWith('<svg class="kirby icon"', $withMultipleClasses);
+
+        $withAttributes = HtmlHelpers::svgWithClass($svgPath, 'kirby', [
+            'aria-hidden' => 'true',
+            'focusable' => 'false',
+        ]);
+        $this->assertStringStartsWith('<svg ', $withAttributes);
+        $this->assertStringContainsString('class="kirby"', $withAttributes);
+        $this->assertStringContainsString('aria-hidden="true"', $withAttributes);
+        $this->assertStringContainsString('focusable="false"', $withAttributes);
     }
 
     public function testSlug(): void {
